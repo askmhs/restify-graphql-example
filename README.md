@@ -1,4 +1,4 @@
-![alt text](img1.png "Restify GraphQL Example")
+![alt text](img2.png "Restify GraphQL Example")
 
 ## Requirements:
 - Node.js v8++
