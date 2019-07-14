@@ -9,11 +9,7 @@ export default {
             type: new GraphQLNonNull(GraphQLID)
         }
     },
-    resolve(root, params) {
-        return UserEntity.findById(params.id).lean().then(user => {
-            return user
-        }).catch(error => {
-            throw error;
-        });
+    async resolve(root, params) {
+        return await UserEntity.findById(params.id).lean();
     }
 }

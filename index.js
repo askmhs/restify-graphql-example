@@ -4,7 +4,7 @@ import schema from "./src/graphql";
 import { graphqlRestify, graphiqlRestify } from "apollo-server-restify";
 
 /**
- * Creatin server
+ * Creating server
  */
 const server = restify.createServer({
     name: "Restify GraphQL Server"
@@ -13,9 +13,7 @@ const server = restify.createServer({
 /**
  * Load .env file
  */
-require("dotenv").config({
-    path: "./.env"
-});
+require("dotenv").config();
 
 /**
  * Attempt to connect to MongoDB server

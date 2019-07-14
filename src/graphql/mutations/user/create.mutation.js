@@ -10,11 +10,7 @@ export default {
             type: new GraphQLNonNull(userInputType)
         }
     },
-    resolve(root, params) {
-        return UserEntity.create(params.data).then(created => {
-            return created;
-        }).catch(error => {
-            throw error;
-        });
+    async resolve(root, params) {
+        return await UserEntity.create(params.data);
     }
 };
